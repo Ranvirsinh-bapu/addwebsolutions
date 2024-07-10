@@ -13,7 +13,6 @@
 
  get_header(); ?>
 
- <!-- hello -->
 <div class="resource-title"><h1>Resource</h1></div>
 <div id="resource-filter">
     <select id="resource_type">
