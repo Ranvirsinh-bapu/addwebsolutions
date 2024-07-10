@@ -53,7 +53,6 @@
                 <?php endif; ?>
                 <div class="resource-content">
                     <h2><?php the_title(); ?></h2>
-                    <?php the_excerpt(); ?>
                 </div>
             </div>
             <?php

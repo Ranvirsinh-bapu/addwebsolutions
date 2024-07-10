@@ -10,7 +10,7 @@ function enqueue_custom_scripts() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_scripts');
 function create_posttype() {
-    // Register Custom Post Type
+
     register_post_type(
         'resource',
         array(
@@ -26,7 +26,6 @@ function create_posttype() {
         )
     );
 
-    // Register Custom Taxonomy for Resource Type
     register_taxonomy(
         'resource_type',
         'resource',
@@ -37,7 +36,6 @@ function create_posttype() {
         )
     );
 
-    // Register Custom Taxonomy for Resource Topic
     register_taxonomy(
         'resource_topic',
         'resource',
@@ -51,7 +49,6 @@ function create_posttype() {
 add_action('init', 'create_posttype');
 
 
-// AJAX filter function
 function load_resources_by_ajax() {
     check_ajax_referer('ajax_filter_nonce', 'security');
 
@@ -92,7 +89,6 @@ function load_resources_by_ajax() {
                 <?php endif; ?>
                 <div class="resource-content">
                     <h2><?php the_title(); ?></h2>
-                    <?php the_excerpt(); ?>
                 </div>
             </div>
         <?php endwhile;
